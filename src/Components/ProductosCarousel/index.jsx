@@ -47,6 +47,7 @@ var settings = {
 const ProductosCategory = () => {
   const context = useContext(ShopingCartContext);
 
+
   return (
     <section className="organic-all sec-space-bottom">
       <div className="pattern">
@@ -56,7 +57,8 @@ const ProductosCategory = () => {
         <img className="logo-img" src={logo} style={{ width: 100 }} alt="" />
       </div>
 
-      <div className="container-fluid mt-20">
+      <div className="container-fluid mt-10">
+        <h1 className="w-full text-center text-3xl">LO MÁS VENDIDO</h1>
         <div className="col-md-12">
           <div id={`product-tab-1`} className="tab-pane">
             {context.products && context.products.length > 0 ? (
@@ -65,7 +67,6 @@ const ProductosCategory = () => {
                   <ProductCard
                     key={index}
                     producto={producto}
-                    categoria={producto.categoria}
                   />
                 ))}
               </Slider>

@@ -6,12 +6,13 @@ import pattern from '../../assets/img/icons/white-pattern.png'
 import logo from '../../assets/img/logo/Logo_PHCV.svg'
 import { ShopingCartContext } from '../../Context';
 import { useContext } from "react"
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 
 function Carrito() {
     const context = useContext(ShopingCartContext);
 
+    const navigate = useNavigate();
 
     const handleImageError = (e) => {
         e.target.src = product_img; // Reemplaza con imagen predeterminada si no se carga la original
@@ -22,10 +23,14 @@ function Carrito() {
             .trim()
             .toLowerCase()
             .replace(/^\w/, (char) => char.toUpperCase())
-            .normalize("NFD") // Normaliza el string separando los caracteres base de los acentos
-            .replace(/[\u0300-\u036f]/g, '') // Elimina los acentos diacríticos
-            .replace(/ñ/g, 'n') // Reemplaza "ñ" con "n"
-            .replace(/Ñ/g, 'N'); // Reemplaza "Ñ" con "N"
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, '')
+            .replace(/ñ/g, 'n')
+            .replace(/Ñ/g, 'N');
+    };
+
+    const proceedToCheckout = () => {
+        navigate("/checkout"); // Redirige a la página de checkout
     };
 
 
@@ -130,7 +135,7 @@ function Carrito() {
 
                                 <div className="flex justify-around items-center w-full">
                                     <NavLink to="/tienda" className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Seguir Comprando</NavLink>
-                                    <button className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Proceder al Pago</button>
+                                    <button onClick={proceedToCheckout} className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Proceder al Pago</button>
                                 </div>
                             </div>
                         </div>

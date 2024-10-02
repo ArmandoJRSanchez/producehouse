@@ -54,6 +54,15 @@ function Navbar() {
                     </NavLink>
                 </li>
                 <li>
+                    <NavLink to="./login">
+                        Login
+                    </NavLink>
+                    /
+                    <NavLink to="./registro">
+                        Registrarse
+                    </NavLink>
+                </li>
+                <li>
                     <NavLink to="./carrito" className="flex justify-between items-center gap-3">
                         <FaShoppingCart /> {context.cartProduct.length}
                     </NavLink>

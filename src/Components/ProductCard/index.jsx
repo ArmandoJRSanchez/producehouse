@@ -5,10 +5,9 @@ import product_img from '../../../public/products/default.png';
 import shap_small from '../../assets/img/icons/shap-small.png';
 import { FaCheckCircle } from 'react-icons/fa';
 
-const ProductCard = ({ producto, categoria }) => {
+const ProductCard = ({ producto }) => {
   const context = useContext(ShopingCartContext);
   const [isHovered, setIsHovered] = useState(false);
-
   const handleAddToCart = (producto, event) => {
     event.stopPropagation()
     var fechaActual = new Date();
@@ -90,7 +89,7 @@ const ProductCard = ({ producto, categoria }) => {
           <img src={shap_small} alt={producto.nombre} className="w-full" />
         </div>
         <div className="px-4 py-3">
-          <span className="text-gray-400 mr-3 uppercase text-xs">{categoria}</span>
+          <span className="text-gray-400 mr-3 uppercase text-xs">{producto.categoria.data.nombre}</span>
           <p className="text-lg text-center m-0 font-bold text-black truncate block capitalize">
             {producto.nombre}
           </p>

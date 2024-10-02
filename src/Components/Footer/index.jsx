@@ -1,8 +1,8 @@
-
-import { FaHeart } from 'react-icons/fa6';
-import logo from '../../assets/img/logo/Logo_PHCH.svg'
-import pattern from '../../assets/img/icons/white-pattern.png'
+import { FaAddressCard, FaEnvelope, FaHeart, FaMapLocation, FaPhone } from 'react-icons/fa6';
+import logo from '../../assets/img/logo/Logo_PHBH.svg';
+import pattern from '../../assets/img/icons/white-pattern.png';
 import { FaArrowAltCircleUp } from 'react-icons/fa';
+import { NavLink } from 'react-router-dom';
 
 const Footer = () => {
 
@@ -13,80 +13,57 @@ const Footer = () => {
         });
     };
 
-
     return (
         <>
-            <footer className="page-footer"> 
-                <section className="sec-space light-bg">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-6 col-sm-12 footer-widget">
+            <footer className="page-footer">
+                <section className="sec-space footer-bg">
+                    <div className="container mx-auto px-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div className="flex justify-center sm:justify-start items-center">
                                 <div className="main-logo">
-                                    <a href="index.html"> <img className='w-60' alt="" src={logo} />  </a>
-                                    <span className="medium-font">Produce House</span>
-                                </div>
-                                <span className="divider-2"></span>
-                                <div className="text-widget">
-                                    <p>Tenemos la mejor logistica y atencion al cliente para que tus productos lleguen frescos y en tiempo y forma                                    </p>
-                                    <ul>
-                                        <li> <i className="fa fa-map-marker"></i> <span> <strong>Ciudad de México,</strong> Mexico</span> </li>
-                                        <li> <i className="fa fa-envelope-square"></i> <span><a href="#">contacto@producehouse.com</a> </span> </li>
-                                        <li> <i className="fa fa-phone-square"></i> <span><a href="#">www.producehouse.com</a> </span> </li>
-                                    </ul>
+                                    <NavLink to="/tienda">
+                                        <img className='w-40 sm:w-80' alt="Logo" src={logo} />
+                                    </NavLink>
                                 </div>
                             </div>
-                            <div className="col-md-6 col-sm-4 ">
-                                <h2 className="title-1">  <span className="light-font">Produce House  </span> <strong>Información </strong> </h2>
-                                <span className="divider-2"></span>
-                                <ul className="list">
-                                    <li> <a href="./nosotros"> Acerca de la tienda </a> </li>
-                                    <li> <a href="./blog"> Nuestro Blog </a> </li>
-                                    <li> <a href="./tienda"> Nuevos Productos </a> </li>
+                            <div className="flex justify-center sm:justify-end items-center">
+                                <ul className="list space-y-4">
+                                    <li className='flex items-center gap-4 text-lg sm:text-xl text-white'>
+                                        <FaMapLocation />
+                                        <span>Dirección</span>
+                                    </li>
+                                    <li className='flex items-center gap-4 text-lg sm:text-xl text-white'>
+                                        <FaPhone />
+                                        <span>55 0000 0000</span>
+                                    </li>
+                                    <li className='flex items-center gap-4 text-lg sm:text-xl text-white'>
+                                        <FaEnvelope />
+                                        <NavLink className="hover:text-white text-white" to="mailto:contacto@pruducehouse.com">
+                                            <span>contacto@pruducehouse.com</span>
+                                        </NavLink>
+                                    </li>
                                 </ul>
                             </div>
-                            {/* <div className="col-md-3 col-sm-4 footer-widget">
-                                <h2 className="title-1">  <span className="light-font">Mi  </span> <strong>Cuenta </strong> </h2>
-                                <span className="divider-2"></span>
-                                <ul className="list">
-                                    <li> <a href="my-account.html"> Cuenta </a> </li>
-                                    <li><a href="account-information.html"> A </a></li>
-                                    <li><a href="address-book.html"> Address Books</a></li>
-                                    <li><a href="order-history.html"> Order History</a></li>
-                                    <li><a href="review-rating.html"> Reviews and Ratings</a></li>
-                                    <li><a href="return.html"> Returns Requests</a></li>
-                                    <li><a href="newsletter.html"> Newsletter</a></li>
-                                </ul>
-                            </div> */}
-                            {/* <div className="col-md-3 col-sm-4 footer-widget">
-                                <h2 className="title-1">  <span className="light-font">photo  </span> <strong>instagram </strong> </h2>
-                                <span className="divider-2"></span>
-                                <ul className="instagram-widget">
-                                    <li> <a href="#"> <img src="assets/img/extra/80x80-1.jpg" alt="" /> </a> </li>
-                                    <li> <a href="#"> <img src="assets/img/extra/80x80-2.jpg" alt="" /> </a> </li>
-                                    <li> <a href="#"> <img src="assets/img/extra/80x80-3.jpg" alt="" /> </a> </li>
-                                    <li> <a href="#"> <img src="assets/img/extra/80x80-4.jpg" alt="" /> </a> </li>
-                                    <li> <a href="#"> <img src="assets/img/extra/80x80-5.jpg" alt="" /> </a> </li>
-                                    <li> <a href="#"> <img src="assets/img/extra/80x80-6.jpg" alt="" /> </a> </li>
-                                </ul>
-                            </div> */}
                         </div>
                     </div>
                 </section>
                 <section className="footer-bottom">
-                    <div className="pattern"> 
-                        <img alt="" src={pattern} />
+                    <div className="pattern">
+                        <img alt="Pattern" src={pattern} />
                     </div>
-                    <div onClick={() => scrollToTop()} className="to-top text-green-400"> <FaArrowAltCircleUp/> </div>
-                    <div className="container ptb-50">
-                        <div className="row">
-                            <div className="col-md-7 col-sm-5">
-                                <p className='flex justify-center items-center gap-1'>©2024 <a href="#"> <strong> producehouse.com</strong></a>, diseñado por <FaHeart/> Asicom Graphics, Todos los derechos reservados</p>
+                    <div onClick={scrollToTop} className="to-top text-green-400 cursor-pointer">
+                        <FaArrowAltCircleUp />
+                    </div>
+                    <div className="container mx-auto ptb-50 px-4">
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="w-full flex justify-center sm:justify-start items-center">
+                                <p className='w-full flex gap-1 text-center sm:text-left text-sm sm:text-base'>©2024 <a href="#"> <strong> producehouse.com</strong></a>, diseñado por <FaHeart /> Asicom Graphics, Todos los derechos reservados</p>
                             </div>
-                            <div className="col-md-5 col-sm-7">
-                                <ul className="primary-navbar footer-menu">
-                                    <li> <a href="./contacto">Contacto</a> </li>
-                                    <li> <a href="#">Términos de uso  </a> </li>
-                                    <li> <a href="#">Políticas de privacidad</a> </li>
+                            <div className="flex justify-center sm:justify-end items-center">
+                                <ul className="primary-navbar footer-menu flex space-x-4 text-sm sm:text-base">
+                                    <li><a href="./contacto">Contacto</a></li>
+                                    <li><a href="#">Términos de uso</a></li>
+                                    <li><a href="#">Políticas de privacidad</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -15,9 +15,11 @@
   .slick-slide:last-child {
     padding-right: 0;
   }
+  
   .slick-slide img {
     display: block;
   }
+
   .slick-list {
     margin: 0 15px;
   }
@@ -25,7 +27,6 @@
   .slick-prev {
     width: 50px;
     left: 0;
-    top: 20%;
     position: absolute;
     height: 50px;
     background: #7fba00;
@@ -37,7 +38,6 @@
   .slick-next {
     width: 50px;
     right: 0;
-    top: 20%;
     position: absolute;
     height: 50px;
     background: #7fba00;

@@ -1,15 +1,13 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i");
-@import url("https://fonts.googleapis.com/css?family=Great+Vibes&subset=latin-ext");
 
 @font-face {
-  font-family: Helvetica-bold, Arial, sans-serif;
-  src: url(fonts/helvetica-bold.ttf);
+  font-family: Wintter;
+  src: url(../../assets/fonts/Wintter.ttf);
   font-weight: 900;
 }
 
 @font-face {
-  font-family: Helvetica-normal, Arial, sans-serif;
-  src: url(fonts/helvetica-normal.ttf);
+  font-family: Wintter-normal;
+  src: url(../../assets/fonts/Wintter.ttf);
   font-weight: 400;
 }
 
@@ -174,7 +172,7 @@
 
 /*---------------- 1.2 Global properties (body, common classes, structure etc) Starts ----------------------*/
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: Wintter;
   font-weight: normal;
   background-color: #ffffff;
   color: #525252;
@@ -1465,6 +1463,10 @@ p {
   background-size: cover;
   padding: 80px 0 100px;
   overflow: hidden;
+}
+
+.footer-bg{
+  background-color: #899182;
 }
 
 .breadcrumb-bg::before {
@@ -3410,7 +3412,7 @@ p {
   bottom: -25px;
   color: #999999;
   display: block;
-  font-family: "Roboto", sans-serif;
+  font-family: Wintter;
   font-size: 9px;
   font-weight: 900;
   left: -5px;

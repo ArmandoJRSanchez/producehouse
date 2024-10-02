@@ -14,7 +14,7 @@ function Tienda() {
         // console.log(categoria);
         // Verifica que context.catalog esté definido y tenga elementos
         if (context.products && context.products.length > 0) {
-            const filtred = context.products.filter(item => item.categoria.toLowerCase() === categoria);
+            const filtred = context.products.filter(item => item.categoria.data.nombre.toLowerCase() === categoria);
 
             context.setCatalog(filtred);
 
